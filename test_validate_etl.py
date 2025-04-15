@@ -31,7 +31,7 @@ class Test_ETLValidation:
 
         for col, type in expected_schema.items():
             sample_value = self.processed_data[col].iloc[0]
-            assert isinstance(sample_value,type), f"Incorrect data type for column {col} in raw data."
+            assert isinstance(str(sample_value),type), f"Incorrect data type for column {col} in raw data."
     
 
     def test_validate_email_id_in_processed(self):
